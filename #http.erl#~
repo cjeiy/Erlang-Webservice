@@ -1,0 +1,10 @@
+-module(http).
+-export(parse_request/1).
+
+parse_request(R0) ->
+    {Request} = request_line(R0), 
+    {Headers, R2} = headers(R1) 
+    {Body, _} = message_body(R2)
+    {Request, Headers, Body}.
+request_line([$G, $E, $T, 32 |R0])->
+    
